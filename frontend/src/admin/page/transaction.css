@@ -1,0 +1,50 @@
+.transaction-logo {
+    display: none;
+    width: 200px;
+    height: 55px;
+    margin: 0 auto;
+}
+
+@media print {
+
+    .transaction-logo {
+        display: block !important;
+        margin: 0 auto 20px;
+    }
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #modalTransactions,
+    #modalTransactions * {
+        visibility: visible !important;
+    }
+
+    .btn-light-secondary,
+    #printButton,
+    .modal-header,
+    .modal-footer {
+        display: none !important;
+    }
+
+    #modalTransactions {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-information-header {
+        page-break-before: always;
+        page-break-inside: avoid;
+        margin-top: 20px;
+    }
+
+    .payment-information-header {
+        page-break-before: auto;
+        break-before: auto;
+        margin-top: 0;
+    }
+}

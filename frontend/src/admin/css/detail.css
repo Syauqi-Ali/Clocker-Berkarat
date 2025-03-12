@@ -1,0 +1,658 @@
+.header {
+    background-color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+.header .search-bar {
+    margin-right: 20px;
+}
+
+.header .search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+}
+
+.header .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.header .nav-links a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header .nav-links .messages {
+    position: relative;
+}
+
+.header .nav-links .messages .badge {
+    position: absolute;
+    top: -5px;
+    right: -15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.profile-sidebar {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.profile-sidebar img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.profile-sidebar .work,
+.profile-sidebar .skills {
+    margin-top: 20px;
+}
+
+.profile-sidebar .work h3,
+.profile-sidebar .skills h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.profile-sidebar .work .item,
+.profile-sidebar .skills .item {
+    margin-bottom: 10px;
+}
+
+.profile-sidebar .work .item span,
+.profile-sidebar .skills .item span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-sidebar .work .item .primary {
+    color: #007bff;
+    font-weight: 500;
+}
+
+.profile-content {
+    width: 70%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-content .header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.profile-content .header .location {
+    color: #666;
+    font-size: 14px;
+}
+
+.profile-content .header .bookmark {
+    margin-left: auto;
+    color: #666;
+    cursor: pointer;
+}
+
+.profile-content .header .bookmark:hover {
+    color: #333;
+}
+
+.profile-content .header .job-title {
+    color: #007bff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.profile-content .rankings {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-content .rankings .score {
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.profile-content .rankings .stars {
+    color: #ffc107;
+}
+
+.profile-content .actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-content .actions .btn {
+    margin-right: 10px;
+}
+
+/* .profile-content .actions .btn {
+    padding: 10px 20px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    background-color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.profile-content .actions .btn:hover {
+    background-color: #007bff;
+    color: #fff;
+} */
+
+.profile-content .tabs {
+    display: flex;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 20px;
+}
+
+.profile-content .tabs .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #666;
+}
+
+.profile-content .tabs .tab.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.profile-content .tab-content {
+    display: none;
+}
+
+.profile-content .tab-content.active {
+    display: block;
+}
+
+.profile-content .contact-info,
+.profile-content .basic-info {
+    margin-bottom: 20px;
+}
+
+.profile-content .contact-info h3,
+.profile-content .basic-info h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.profile-content .contact-info .item,
+.profile-content .basic-info .item {
+    margin-bottom: 10px;
+}
+
+.profile-content .contact-info .item span,
+.profile-content .basic-info .item span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-content .contact-info .item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.custom-modal {
+    /* max-width: 145vh;
+    max-height: 100vh;
+    overflow-y: auto; */
+}
+.container20 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.search-bar1 {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.search-bar1 input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+.search-bar1 .icon {
+    color: #007bff;
+    font-size: 18px;
+}
+.search-bar1 .icon-right {
+    margin-left: -30px;
+    font-size: 15px;
+}
+.search-bar1 .icon-left {
+    margin-right: 10px;
+}
+.search-bar1 .icon-right.dots {
+    color: #007bff;
+}
+.search-bar1 .icon-right.search {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.container21 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.filter1 {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 25px;
+}
+.filter1 select {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 25px;
+}
+.filter1 .icon {
+    color: #007bff;
+    font-size: 18px;
+}
+.filter1 .icon-right {
+    margin-left: -30px;
+    font-size: 15px;
+}
+.filter1 .icon-left {
+    margin-right: 10px;
+}
+.filter1 .icon-right.dots {
+    color: #007bff;
+}
+.filter1 .icon-right.search {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 50%;
+    padding: 5px;
+}
+.search-filter-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.search-bar1 {
+    width: 213px;
+    position: relative;
+    margin-left: 25px;
+}
+.search-bar1 input {
+    width: 100%;
+    padding-right: 30px;
+}
+.search-bar1 .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+/* Filter */
+.filter1 {
+    width: 175px;
+    position: relative;
+}
+.filter1 select {
+    width: 100%;
+    padding-right: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+.filter1 .icon {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 20px;
+}
+
+.form-select2{
+    width: 150px;
+    position: relative;
+    border-radius: 50%;
+
+}
+
+/* Styling untuk input tanggal */
+.styled-date-input {
+    width: 100%;
+    max-width: 200px; /* Batas lebar maksimal */
+    padding: 8px 12px; /* Ruang dalam */
+    border: 1px solid #ccc; /* Border warna abu-abu */
+    border-radius: 4px; /* Sudut membulat */
+    background-color: #fff; /* Latar belakang putih */
+    color: #333; /* Warna teks */
+    font-size: 14px; /* Ukuran font */
+    outline: none; /* Hilangkan garis biru default */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animasi hover */
+}
+
+.styled-date-input:hover {
+    border-color: #007bff; /* Border biru saat hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+.styled-date-input:focus {
+    border-color: #007bff; /* Border biru saat fokus */
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Efek fokus */
+}
+
+
+
+
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    /* Ukuran diperkecil */
+    .header {
+        padding: 10px;
+    }
+
+    .header img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header .logo {
+        font-size: 18px;
+    }
+
+    .header .search-bar input {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .container {
+        gap: 10px; /* Kurangi jarak antar elemen */
+    }
+
+    .profile-sidebar {
+        max-width: 40%; /* Sidebar diperkecil */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .profile-content {
+        max-width: 60%; /* Konten diperkecil */
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .profile-sidebar img {
+        height: auto;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Tampilan lebih kecil */
+    .header img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header .logo {
+        font-size: 16px;
+    }
+
+    .header .search-bar input {
+        font-size: 12px;
+    }
+
+    .container {
+        gap: 5px;
+        padding: 0;
+        padding-right: 12px;
+        padding-block: 15px;
+    }
+
+    .profile-sidebar {
+        max-width: 45%; /* Sidebar lebih kecil */
+        font-size: 12px;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .profile-content {
+        max-width: 67%; /* Konten lebih kecil */
+        font-size: 12px;
+    }
+
+    .profile-content .header h2 {
+        font-size: 14px
+    }
+
+    .profile-content .actions .btn {
+        padding: 4px 6px;
+        margin-right: 5px;
+        font-size: 10px;
+    }
+
+    .search-bar1{
+       margin-left: 0;
+       width: 166px;
+    }
+
+    .search-bar1 input{
+        font-size: 11px;
+        padding: 0;
+    }
+
+    .search-bar1 .icon-right.search {
+        padding: 4px;
+        font-size: x-small;
+    }
+
+    .py-3 {
+        padding: 7px 7px !important;
+    }
+
+    .filter1{
+        margin-right: 10px;
+        width: 153px;
+     }
+
+     .p-4 {
+        padding: 1rem !important;
+     }
+
+     .filter1 select{
+        font-size: 12px;
+     }
+
+     h5{
+        font-size: 16px;
+     }
+
+     .profile-sidebar .work .item span, .profile-sidebar .skills .item span {
+        font-size: 12px;
+    }
+
+    .profile-sidebar .work h3, .profile-sidebar .skills h3 {
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .filter1 {
+        width: 182px; /* Lebar lebih kecil untuk mobile */
+    }
+
+    .filter1 select {
+        font-size: 12px; /* Ukuran font lebih kecil */
+        padding: 0px 8px; /* Padding lebih kecil */
+    }
+
+    .filter1 .icon {
+        font-size: 14px; /* Ukuran ikon lebih kecil */
+    }
+
+    .styled-date-input {
+        width: 100%; /* Mengisi lebar penuh */
+        font-size: 12px; /* Ukuran font lebih kecil */
+        padding: 6px 10px; /* Padding lebih kecil */
+    }
+    /* Styling untuk dropdown select */
+.filter {
+    font-size: 14px;
+    padding: 5px;
+    width: 150px;  /* Tentukan panjang dropdown */
+    height: 30px;  /* Tentukan tinggi dropdown */
+    appearance: none;  /* Menghilangkan tampilan default dropdown */
+    border: 1px solid #ccc;  /* Tambahkan border jika diperlukan */
+    background-color: #f9f9f9;  /* Warna latar belakang untuk dropdown */
+    border-radius: 5px;  /* Membuat sudut dropdown lebih lembut */
+    transition: width 0.3s ease;  /* Animasi perubahan ukuran */
+}
+
+/* Styling untuk ikon filter */
+#filter-icon {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+
+
+/* Styling untuk dropdown tambahan */
+#category-dropdown, #status-dropdown, #date-input {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
+/* Kontainer utama untuk search dan filter */
+.search-filter-container {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding: 10px 0;
+    overflow-x: auto; /* Membuat elemen di dalamnya bisa discroll ke samping */
+    white-space: nowrap; /* Menyusun elemen dalam satu baris */
+}
+
+/* Styling untuk setiap elemen filter dan search */
+.search-bar1, .filter1 {
+    display: inline-block;
+    margin-right: 10px; /* Menambahkan jarak antar elemen */
+    white-space: nowrap;
+}
+
+/* Untuk dropdown, pastikan elemen tidak melebihi batas kontainer */
+.filter1 select {
+    min-width: 118px; /* Setel lebar minimum untuk dropdown */
+    white-space: nowrap;
+}
+
+/* Untuk elemen lainnya jika perlu */
+#category-dropdown, #status-dropdown, #date-input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.search-filter-container {
+    overflow-x: auto; /* Pastikan bisa di-scroll secara horizontal */
+}
+
+/* Untuk search bar */
+.search-bar1 input {
+    width: 200px; /* Ukuran tetap pada mobile */
+}
+
+/* Untuk filter select */
+.filter1 select {
+    width: 90px; /* Ukuran tetap pada mobile */
+}
+
+/* Untuk kategori dan status dropdown */
+#category-dropdown select,
+#status-dropdown select,
+#date-input input {
+    width: 10px; /* Ukuran tetap pada mobile */
+}
+
+.filter1 {
+    display: inline-block;
+    position: relative;
+}
+
+
+.filter1 i {
+    position: absolute;
+    right: 10px; /* Tempatkan ikon di kanan */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-80%); /* Sesuaikan agar ikon benar-benar di tengah */
+    pointer-events: none; /* Pastikan ikon tidak menghalangi interaksi */
+}
+
+}

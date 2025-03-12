@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Pastikan script hanya bisa dijalankan dari root proyek
+if [ ! -f "./frontend/package.json" ] && [ ! -f "./backend/Cargo.toml" ]; then
+    echo "Error: Clocker harus dijalankan dari root proyek!"
+    exit 1
+fi
+
+# Fungsi untuk menjalankan backend dan frontend
+run() {
+    echo "Menjalankan Frontend..."
+    (cd frontend && npm run dev) & FRONTEND_PID=$!
+    
+    echo "Menjalankan Backend..."
+    (cd backend && cargo run) & BACKEND_PID=$!
+
+    # Menangkap sinyal Ctrl+C untuk menghentikan proses
+    trap "kill $BACKEND_PID $FRONTEND_PID; exit" SIGINT SIGTERM
+
+    # Menunggu kedua proses selesai
+    wait $BACKEND_PID
+    wait $FRONTEND_PID
+}
+
+
+# Fungsi untuk menginstall dependensi
+install() {
+    echo "Menginstall dependensi Backend..."
+    (cd backend && cargo build)
+
+    echo "Menginstall dependensi Frontend..."
+    (cd frontend && npm install)
+
+    echo "Instalasi selesai!"
+}
+
+# Menentukan perintah
+case "$1" in
+    run)
+        run
+        ;;
+    install)
+        install
+        ;;
+    *)
+        echo "Usage: ./clocker {run|install}"
+        exit 1
+        ;;
+esac
